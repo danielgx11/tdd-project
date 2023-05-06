@@ -21,9 +21,10 @@ class HomePageTest(TestCase):
 
         self.assertTemplateUsed(response, 'home.html')
 
-    def test_displays_all_list_items(self):
-        Item.objects.create(text='itemey 1')
-        Item.objects.create(text='itemey 2')
+    def test_displays_all_items(self):
+        my_list = List.objects.create()
+        Item.objects.create(text='itemey 1', list=my_list)
+        Item.objects.create(text='itemey 2', list=my_list)
 
         response = self.client.get('/')
 
