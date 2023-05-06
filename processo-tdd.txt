@@ -1,0 +1,5 @@
+O processo se resume em você começar o desenvolvimento escrevendo
+um teste unitário, após isso rodar o teste, que obviamente não irá
+passar, depois você escreve um código mínimo para o teste passar,
+após isso você refatora e mantém esse ciclo, lembrando que o teste
+não pode mais falhar depois do primeiro sucesso
